@@ -1,0 +1,28 @@
+{% block content %}
+    
+
+<h1> User data </h1> 
+<a class="nav-link" href="{{ url_for('register') }}">input</a>
+
+<br>
+
+
+{%if 16 < bmi < 25%}
+<h2> {{ name }} {{ surname }} BMI = {{ bmi }} - normal weight </h2>
+
+{%elif 25 < bmi < 35%}
+<h2> {{ name }} {{ surname }} BMI = {{ bmi }} - obesity class 1 </h2>
+
+{%elif 35 < bmi < 40%}
+<h2> {{ name }} {{ surname }} BMI = {{ bmi }} - obesity class 2 </h2>
+
+{%else %}
+<h2> {{ name }} {{ surname }} BMI = {{ bmi }} </h2>
+
+
+
+{% endif  %}
+
+
+
+{% endblock  %}
